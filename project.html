@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>I miei progetti</title>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/navbar.js"></script>
+</head>
+<body>
+    <div id="navbar-desktop">
+        <a href="index.html"><img id="logo" alt="logo" src="imgs/P.png"></a>
+        <ul id="navlist-desktop">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="underlined" href="project.html">Progetti</a></li>
+            <li><a href="#">Chi sono</a></li>
+        </ul>
+    </div>
+    <div id="navbar-mobile">
+        <a href="index.html"><img id="logo" alt="logo" src="imgs/P.png"></a>
+        
+        <div id = "hamburger" onclick="showOrHideList()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+    <ul id="navlist-mobile">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Progetti</a></li>
+        <li><a href="#">Chi sono</a></li>
+    </ul>
+    <div id ="listaEsercizi">
+        
+        <a href="Esercizio1/matrice.html">
+            <div class="card-project">
+                <h2 class="titolo-card">Matrice </h2>
+                <p class="sottotitolo-card">Esercizio 1</p>
+                <p class="descrizione-card">Scopri il panorama nascosto dietro le caselle della matrice</p>
+            </div>
+        </a>
+        
+        <a href="Esercizio2/ese2.html">
+            <div class="card-project">
+                <h2 class="titolo-card">Caccia al tesoro</h2>
+                <p class="sottotitolo-card">Esercizio 2</p>
+                <p class="descrizione-card">Prova a trovare il tesoro</p>
+            </div>
+        </a>
+        <a href="Esercizio3/ese3.html">
+            <div class="card-project">
+                <h2 class="titolo-card">Caccia al tesoro contro il pc </h2>
+                <p class="sottotitolo-card">Esercizio 3</p>
+                <p class="descrizione-card">Prova a trovare il tesoro prima che lo trovi il computer!</p>
+            </div>
+        </a>
+        
+    </div>
+</body>
+</html>

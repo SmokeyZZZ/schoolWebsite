@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice </title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/navbar.js"></script>
+    <style>
+        tr,th
+        {
+            border:2px solid black;
+        }
+	img
+	{
+		max-width:75px;
+		max-height:75px;
+	}	
+    </style>
+    <script>
+        function reset()
+        {
+            for(let i = 0 ; i<9 ; i++)
+            {
+                document.getElementById(i).src = "vuoto.jpg"
+            }
+        }
+        reset();
+    </script>
+    </head>
+<body>
+    <div id="navbar-desktop">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        <ul id="navlist-desktop">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../project.html">I miei Progetti</a></li>
+            <li><a href="#">Su di me</a></li>
+        </ul>
+    </div>
+    <div id="navbar-mobile">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        
+        <div id = "hamburger" onclick="showOrHideList()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+    <ul id="navlist-mobile">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../project.html">I miei Progetti</a></li>
+        <li><a href="#">Su di me</a></li>
+    </ul>
+    
+    <table>
+        <tr>
+            <th><img id ="0" src="vuoto.jpg" onclick="document.getElementById('0').src = '0.jpeg'" ></th>
+            <th><img id ="1" src="vuoto.jpg" onclick="document.getElementById('1').src = '1.jpeg'"></th>
+            <th><img id ="2" src="vuoto.jpg" onclick="document.getElementById('2').src ='2.jpeg' " ></th>
+        </tr>
+        <tr>
+            <th><img id ="3" src="vuoto.jpg" onclick="document.getElementById('3').src ='3.jpeg'"></th>
+            <th><img id ="4" src="vuoto.jpg" onclick="document.getElementById('4').src ='4.jpeg'"></th>
+            <th><img id ="5" src="vuoto.jpg" onclick="document.getElementById('5').src ='5.jpeg'"></th>
+        </tr>
+        <tr>
+            <th><img  id ="6" src="vuoto.jpg" onclick="document.getElementById('6').src ='6.jpeg' "></th>
+            <th><img  id ="7" src="vuoto.jpg" onclick="document.getElementById('7').src ='7.jpeg' "></th>
+            <th><img  id ="8" src="vuoto.jpg" onclick="document.getElementById('8').src ='8.jpeg' "></th>
+        </tr>
+    </table>
+    <button onclick="reset()">resetta l'immagine</button>
+</body>
+</html>

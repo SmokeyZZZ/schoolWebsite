@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caccia al tesoro</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js"></script>
+    <script src="../scripts/navbar.js"></script>    
+    <style>
+        td,tr,table
+        {
+            border : black solid 1px;
+        }
+        img 
+        {
+            max-width:100px;
+            max-height:auto;
+        }
+
+    </style>
+</head>
+<!--
+Creare una tabella HTML di matrice 5x5, inizialmente caricata, per ogni cella, con immagine bianca, per simulare la caccia al tesoro.
+Creare un immagine, scaricata dal web, come tesoro da ricercare.
+Al caricamento della pagina HTML, precaricare in una delle celle 5x5, in modo random, l'immagine del tesoro scelta.
+Controllare al click del mouse, la presenza o no, in quella data cella, del tesoro, fare apparire subito sl click l'immagine corrispondente, 
+che se sarà quella del tesoro, si emetterà anche un box col messaggio "Hai Vinto !", 
+oppure si farà comparire un altra immagine corrispondente al click fallito, di vostro gradimento.
+Prevedere un pulsante "RESET", per reimpostare il campo di gioco, e sempre in modalità random, la collocazione dell'immagine del "tesoro".-->
+<body >
+    <div id="navbar-desktop">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        <ul id="navlist-desktop">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../project.html">I miei Progetti</a></li>
+            <li><a href="#">Su di me</a></li>
+        </ul>
+    </div>
+    <div id="navbar-mobile">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        
+        <div id = "hamburger" onclick="showOrHideList()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+    <ul id="navlist-mobile">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../project.html">I miei Progetti</a></li>
+        <li><a href="#">Su di me</a></li>
+    </ul>
+    
+    <table >
+        <tr>
+            <td><img src="img/vuoto.jpg" onclick="CheckWin(0)" alt="" id="0"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="1" onclick="CheckWin(1)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="2" onclick="CheckWin(2)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="3" onclick="CheckWin(3)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="4" onclick="CheckWin(4)"></td>
+        </tr>
+        <tr>
+            <td><img src="img/vuoto.jpg" alt="" id="5" onclick="CheckWin(5)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="6" onclick="CheckWin(6)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="7" onclick="CheckWin(7)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="8" onclick="CheckWin(8)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="9" onclick="CheckWin(9)"></td>
+        </tr>
+        <tr>
+            <td><img src="img/vuoto.jpg" alt="" id="10" onclick="CheckWin(10)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="11" onclick="CheckWin(11)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="12" onclick="CheckWin(12)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="13" onclick="CheckWin(13)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="14" onclick="CheckWin(14)"></td>
+        </tr>
+        <tr>
+            <td><img src="img/vuoto.jpg" alt="" id="15" onclick="CheckWin(15)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="16" onclick="CheckWin(16)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="17" onclick="CheckWin(17)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="18" onclick="CheckWin(18)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="19" onclick="CheckWin(19)"></td>
+        </tr>
+        <tr>
+            <td><img src="img/vuoto.jpg" alt="" id="20" onclick="CheckWin(20)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="21" onclick="CheckWin(21)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="22" onclick="CheckWin(22)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="23" onclick="CheckWin(23)"></td>
+            <td><img src="img/vuoto.jpg" alt="" id="24" onclick="CheckWin(24)"></td>
+        </tr>
+    </table>
+    <button onclick="reset()">RESET</button>
+
+</body>
+</html>

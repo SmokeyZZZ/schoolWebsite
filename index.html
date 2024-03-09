@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/navbar.js"></script>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="icon" href="imgs/P.png" type="image/icon type">
+    <title>Pietro Sciarrino</title>
+</head>
+<body>
+
+    <div id="navbar-desktop">
+        <a href="index.html"><img id="logo" alt="logo" src="imgs/P.png"></a>
+        <ul id="navlist-desktop">
+            <li><a class="underlined" href="index.html">Home</a></li>
+            <li><a href="project.html">Progetti</a></li>
+            <li><a href="#">Chi sono</a></li>
+        </ul>
+    </div>
+    <div id="navbar-mobile">
+        <a href="index.html"><img id="logo" alt="logo" src="imgs/P.png"></a>
+        
+        <div id = "hamburger" onclick="showOrHideList()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+    <ul id="navlist-mobile">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Progetti</a></li>
+        <li><a href="#">Chi sono</a></li>
+    </ul>
+    <div class="hero">
+        <div class="card">
+            <div class="text"> 
+                
+
+                <h1 class="title">Ciao, sono <span class="highlighted">Pietro.</span></h1>
+                <p>Sono uno studente di <span class="highlighted">informatica</span>,
+                appassionato di <span class="highlighted">programmazione</span> e <span class="highlighted">VR</span>.
+                </p>
+            </div>
+            <a href="#"><button  >Conosci di più</button></a>
+        </div>
+        <img id="persona" src="imgs/personWithVR.png" alt="">
+        <div class="card" >
+            <div class="text" id="right">
+               
+                <h1 class="title">I miei <span class="highlighted">progetti</span></h1>
+                 <p>sono realizzati utilizzando le tecnologie : <span class="highlighted">HTML</span>,
+                 <span class="highlighted">CSS</span> , <span class="highlighted">JS</span>.</p>
+            </div>
+             <a href="project.html"><button >Scopri i progetti</button></a>
+        </div>
+    </div>
+</body>
+</html>

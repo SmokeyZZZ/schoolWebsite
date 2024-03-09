@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caccia al tesoro contro il computer</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    
+    <style>
+        td,tr,table
+        {
+            border : black solid 1px;
+        }
+        img 
+        {
+            max-width:100px;
+            max-height:auto;
+        }
+        #tables
+        {
+            display:flex;
+            justify-content: space-between;
+            margin:25px;
+        }
+        #turnoLabel
+        {
+            margin:auto;
+            font-weight:bold;
+            font-size : 40px;
+        }
+        #turno
+        {font-weight: bold;color:white;text-align:center;}
+        
+
+
+    </style>
+</head>
+<!--
+    Come nell'esercizio precedente, adesso bisogna 
+    1- aggiungere un altro campo da gioco con matrice 5x5, speculare al primo.
+
+    Nel primo campo da gioco, interagiamo sempre allo stesso modo, e nel secondo,
+     considerato il nostro, sarà il computer a tentare di trovare il tesoro nascosto.
+Si faccia in modo che, il tesoro nel primo campo dove giochiamo noi, sia impostato sempre in random, 
+e nel secondo , dove gioca il computer, invece impostato da noi.
+Si imposti sempre un pulsante RESET, e si utilizzi le immagini come nell'esercizio precedente.
+-->
+<body >
+    <div id="navbar-desktop">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        <ul id="navlist-desktop">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../project.html">I miei Progetti</a></li>
+            <li><a href="#">Su di me</a></li>
+        </ul>
+    </div>
+    <div id="navbar-mobile">
+        <a href="../index.html"><img id="logo" alt="logo" src="../imgs/P.png"></a>
+        
+        <div id = "hamburger" onclick="showOrHideList()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+    <ul id="navlist-mobile">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../project.html">I miei Progetti</a></li>
+        <li><a href="#">Su di me</a></li>
+    </ul>
+    <div id="tables">
+        <div id="h">
+            <table>
+                <tr>
+                    <td><img src="img/vuoto.jpg" onclick="CheckWin(0,'h')" alt="" id="0"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="1" onclick="CheckWin(1,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="2" onclick="CheckWin(2,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="3" onclick="CheckWin(3,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="4" onclick="CheckWin(4,'h')"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="5" onclick="CheckWin(5,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="6" onclick="CheckWin(6,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="7" onclick="CheckWin(7,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="8" onclick="CheckWin(8,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="9" onclick="CheckWin(9,'h')"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="10" onclick="CheckWin(10,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="11" onclick="CheckWin(11,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="12" onclick="CheckWin(12,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="13" onclick="CheckWin(13,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="14" onclick="CheckWin(14,'h')"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="15" onclick="CheckWin(15,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="16" onclick="CheckWin(16,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="17" onclick="CheckWin(17,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="18" onclick="CheckWin(18,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="19" onclick="CheckWin(19,'h')"></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="20" onclick="CheckWin(20,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="21" onclick="CheckWin(21,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="22" onclick="CheckWin(22,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="23" onclick="CheckWin(23,'h')"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="24" onclick="CheckWin(24,'h')"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="turnoLabel">È IL TURNO DI : 
+            <div id="turno">UOMO</div>
+        </div>
+        <div id="c">
+            <table>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="25"></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="26" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="27" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="28" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="29" ></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="30" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="31" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="32" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="33" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="34" ></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="35" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="36" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="37" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="38" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="39" ></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="40" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="41" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="42" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="43" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="44" ></td>
+                </tr>
+                <tr>
+                    <td><img src="img/vuoto.jpg" alt="" id="45" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="46" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="47" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="48" ></td>
+                    <td><img src="img/vuoto.jpg" alt="" id="49" ></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+    <button id="reset" onclick="reset()">RESET</button>
+</body>
+</html>
